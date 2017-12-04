@@ -52,12 +52,10 @@ def window_transform_text(text, window_size, step_size):
     i = 0
     end = window_size
     while end < len(text):
-        # if end < len(text):
         inputs.append(text[i:end])
         outputs.append(text[end])
         i += step_size
         end = i + window_size
-    # y = text[window_size:]
 
     return inputs,outputs
 
